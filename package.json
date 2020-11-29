@@ -8,9 +8,16 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lite": "lite-server"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JanMaa/nodetest.git"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "lite-server": "^2.6.1"
+  },
+  "dependencies": {
+    "bootstrap-social": "^5.1.1"
   }
 }
