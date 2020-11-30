@@ -30,7 +30,7 @@
                   <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
               </ul>
               <span class="navbar-text">
-                <a role="button" class="nav-link" data-toggle="modal" data-target="#loginModal">
+                <a role="button" class="nav-link" id="loginBtn">
                 <span class="fas fa-sign-in-alt"></span> Login</a>
               </span>
           </div>          
@@ -159,7 +159,7 @@
                 <img src="img/logo.png" class="img-fluid">
               </div>
               <div class="col-12 col-sm-3 align-self-center">
-                <a class="btn btn-sm btn-warning nav-link btn-block" data-toggle="modal" data-target="#reserveModal" role="button"><h6>Reserve Table</h6></a>
+                <a class="btn btn-sm btn-warning nav-link btn-block" role="button" id="reserveBtn"><h6>Reserve Table</h6></a>
               </div>
           </div>
       </div>
@@ -324,6 +324,14 @@
         $(document).ready(function(){
 
           $("#mycarousel").carousel( { interval: 1000 } );
+          
+          $("#loginBtn").click(function(){
+            $("#loginModal").modal('toggle');
+          })
+
+          $("#reserveBtn").click(function(){
+            $("#reserveModal").modal('toggle');
+          })
 
           $("#carouselButton").click(function(){
                 if ($("#carouselButton").children("span").hasClass('fa-pause')) {
